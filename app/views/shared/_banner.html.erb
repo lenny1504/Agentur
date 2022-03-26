@@ -1,0 +1,13 @@
+<div style="background-color: #0E1B4C">
+  <div class="banner-home container d-flex flex-column justify-content-center align-items-baseline" style="">
+      <%= image_tag "Test Logo.jpeg", class: "logo-home-banner"%>
+      <h1 id="home-banner-header">We create <span class="italic">successful brands</span></h2>
+      <h2 id="home-banner-header">Lets start the journey <span class="italic">together</span></h2>
+      <%# <p id="p-home-banner">A new way of working. Stay agile. Stay aligned.</p> %>
+        <% if user_signed_in?  %>
+          <%= link_to "Contact us", dashboard_path, class: "btn-flat-white", id: "btn-home" %>
+        <% else  %>
+          <%= link_to "Contact us", new_user_registration_path, class: " btn-flat-white", id: "btn-home" %>
+        <% end  %>
+  </div>
+</div>
